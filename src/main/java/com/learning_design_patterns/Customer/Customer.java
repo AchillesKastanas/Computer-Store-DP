@@ -1,6 +1,8 @@
-package com.learning_design_patterns;
+package com.learning_design_patterns.Customer;
 
-import java.util.ArrayList;
+import com.learning_design_patterns.Computer.Icomputer;
+import com.learning_design_patterns.RandomComputerGenerator.RandomComputerSpecGenerator;
+import com.learning_design_patterns.Store.TopTierComputersStore;
 
 public class Customer implements Icustomer{
 

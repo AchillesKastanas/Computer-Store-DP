@@ -1,7 +1,11 @@
-package com.learning_design_patterns;
+package com.learning_design_patterns.RandomComputerGenerator;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import com.learning_design_patterns.Computer.DesktopPC;
+import com.learning_design_patterns.Computer.Icomputer;
+import com.learning_design_patterns.Computer.Laptop;
 
 public class RandomComputerSpecGenerator {
 

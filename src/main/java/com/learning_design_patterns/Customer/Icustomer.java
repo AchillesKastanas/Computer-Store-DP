@@ -1,4 +1,4 @@
-package com.learning_design_patterns;
+package com.learning_design_patterns.Customer;
 
 public interface Icustomer {
 

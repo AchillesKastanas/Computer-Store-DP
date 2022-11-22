@@ -1,6 +1,9 @@
-package com.learning_design_patterns;
+package com.learning_design_patterns.Store;
 
 import java.util.ArrayList;
+
+import com.learning_design_patterns.Computer.Icomputer;
+import com.learning_design_patterns.Customer.Customer;
 
 public class TopTierComputersStore {
 

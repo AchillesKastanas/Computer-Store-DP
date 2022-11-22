@@ -2,6 +2,10 @@ package com.learning_design_patterns;
 
 import java.util.ArrayList;
 
+import com.learning_design_patterns.Computer.DesktopPC;
+import com.learning_design_patterns.Customer.Customer;
+import com.learning_design_patterns.Store.TopTierComputersStore;
+
 public final class App {
     
     private App() {

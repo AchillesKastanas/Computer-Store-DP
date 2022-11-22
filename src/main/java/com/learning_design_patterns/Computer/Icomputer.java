@@ -1,4 +1,4 @@
-package com.learning_design_patterns;
+package com.learning_design_patterns.Computer;
 
 import java.util.ArrayList;
 

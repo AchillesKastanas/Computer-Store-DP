@@ -1,4 +1,4 @@
-package com.learning_design_patterns;
+package com.learning_design_patterns.Computer;
 
 import java.util.ArrayList;
 
@@ -20,7 +20,4 @@ public class DesktopPC implements Icomputer{
     public ArrayList<String> getPartList() {
         return systemSpecs;
     }
-
-
-    
 }
