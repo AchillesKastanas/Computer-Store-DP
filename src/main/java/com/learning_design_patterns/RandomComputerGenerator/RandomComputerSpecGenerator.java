@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import com.learning_design_patterns.Computer.DesktopPC;
-import com.learning_design_patterns.Computer.Icomputer;
+import com.learning_design_patterns.Computer.Computer;
 import com.learning_design_patterns.Computer.Laptop;
 
 public class RandomComputerSpecGenerator {
@@ -26,9 +26,9 @@ public class RandomComputerSpecGenerator {
         // GPUS.add("4080");
     }
 
-    public Icomputer generateSpecList(){
+    public Computer generateSpecList(){
         //Setup
-        Icomputer generatedComputer;
+        Computer generatedComputer;
         ArrayList<String> generatedSpecList = new ArrayList<String>();
         generatedSpecList.add(CPUS.get(new Random().nextInt(CPUS.size()))); 
         generatedSpecList.add(GPUS.get(new Random().nextInt(GPUS.size()))); 

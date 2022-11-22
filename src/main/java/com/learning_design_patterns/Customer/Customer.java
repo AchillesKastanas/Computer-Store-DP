@@ -1,12 +1,12 @@
 package com.learning_design_patterns.Customer;
 
-import com.learning_design_patterns.Computer.Icomputer;
+import com.learning_design_patterns.Computer.Computer;
 import com.learning_design_patterns.RandomComputerGenerator.RandomComputerSpecGenerator;
 import com.learning_design_patterns.Store.TopTierComputersStore;
 
 public class Customer implements Icustomer{
 
-    private Icomputer myComputer;
+    private Computer myComputer;
     private TopTierComputersStore topTierComputersStore = TopTierComputersStore.getInstance();
 
     public Customer(){
@@ -23,11 +23,11 @@ public class Customer implements Icustomer{
             + " and it is a " + myComputer.getClass().getSimpleName());
     }
     
-    public Icomputer getMyComputer(){
+    public Computer getMyComputer(){
         return myComputer;
     }
 
-    public void newPcAvailable(Icomputer newAvailablePc){
+    public void newPcAvailable(Computer newAvailablePc){
         //If the new PC matches the specs the pc has && they are both laptops or desktops
         if(newAvailablePc.getPartList().equals(myComputer.getPartList()) && 
             newAvailablePc.getClass().equals(myComputer.getClass())){

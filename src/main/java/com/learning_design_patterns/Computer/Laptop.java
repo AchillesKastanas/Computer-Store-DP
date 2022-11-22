@@ -1,9 +1,8 @@
 package com.learning_design_patterns.Computer;
 
-import java.io.Console;
 import java.util.ArrayList;
 
-public class Laptop implements Icomputer{
+public class Laptop extends Computer{
 
     private ArrayList<String> systemSpecs = new ArrayList<String>();
 

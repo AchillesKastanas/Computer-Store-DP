@@ -2,18 +2,18 @@ package com.learning_design_patterns.Store;
 
 import java.util.ArrayList;
 
-import com.learning_design_patterns.Computer.Icomputer;
+import com.learning_design_patterns.Computer.Computer;
 import com.learning_design_patterns.Customer.Customer;
 
 public class TopTierComputersStore {
 
     private static volatile TopTierComputersStore instance;
-    private ArrayList<Icomputer> availableComputers = new ArrayList<Icomputer>();
+    private ArrayList<Computer> availableComputers = new ArrayList<Computer>();
     private ArrayList<Customer> subscribedCustomers = new ArrayList<Customer>();
 
     private TopTierComputersStore(){
         //ArrayList containg all the available computers
-        this.availableComputers = new ArrayList<Icomputer>();
+        this.availableComputers = new ArrayList<Computer>();
     }
 
     public static TopTierComputersStore getInstance(){
@@ -43,12 +43,12 @@ public class TopTierComputersStore {
         subscribedCustomers.remove(customer);
     }
 
-    public void removePC(Icomputer computer){
+    public void removePC(Computer computer){
         System.out.println("Customer: " + System.identityHashCode(computer) + " removed from the availability list");
         availableComputers.remove(computer);
     }
 
-    public void newPC(Icomputer justArrivedComputer){
+    public void newPC(Computer justArrivedComputer){
         System.out.println("New " + justArrivedComputer.getClass().getSimpleName()+ " Arrived: " + System.identityHashCode(justArrivedComputer) 
             + " with the specs:" + justArrivedComputer.getPartList());
         try{

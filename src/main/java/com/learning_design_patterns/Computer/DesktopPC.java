@@ -2,7 +2,7 @@ package com.learning_design_patterns.Computer;
 
 import java.util.ArrayList;
 
-public class DesktopPC implements Icomputer{
+public class DesktopPC extends Computer{
 
     private ArrayList<String> systemSpecs = new ArrayList<String>();
 
