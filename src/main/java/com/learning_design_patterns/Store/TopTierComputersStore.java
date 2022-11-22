@@ -50,7 +50,7 @@ public class TopTierComputersStore {
 
     private void addPC(Computer computer){
         System.out.println("[STORE] Computer: " + System.identityHashCode(computer) + " marked as Available");
-        availableComputers.remove(computer);
+        availableComputers.add(computer);
     }
 
     public void removePC(Computer computer){
@@ -89,5 +89,13 @@ public class TopTierComputersStore {
         addPC(newComputer);
         //Notify the subscribedCustomers of the new Computer
         notifyCustomers(newComputer);
+    }
+
+    public ArrayList<Customer> getSubscribedCustomers(){
+        return subscribedCustomers;
+    }
+
+    public ArrayList<Computer> getAvailableCumputers(){
+        return availableComputers;
     }
 }

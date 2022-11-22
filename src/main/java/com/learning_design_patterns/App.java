@@ -34,5 +34,11 @@ public final class App {
         for(int i = 0; i <computerCount; i++){
             topTierComputersStore.orderNewRandomComputerFromRandomFactory();
         }
+
+        //Print all the remaining Customers that have not recieved a computer
+        System.out.println("\n-------------- [APP FINISHED] -----------------\n");
+        System.out.println("STATISTICS:");
+        System.out.println("Remainig Customers without a Computer: " + topTierComputersStore.getSubscribedCustomers().size());
+        System.out.println("Remainig Computers: " + topTierComputersStore.getAvailableCumputers().size() + "\n");
     }
 }
