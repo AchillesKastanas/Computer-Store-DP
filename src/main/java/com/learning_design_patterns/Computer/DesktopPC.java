@@ -13,7 +13,7 @@ public class DesktopPC extends Computer{
     @Override
     public void doAction() {
         //Action for Desktop: RUN APP
-        System.out.println("App Opened from: " + systemSpecs);
+        System.out.println("[" + System.identityHashCode(this) + " - DESKTOP] App Opened");
     }
 
     @Override

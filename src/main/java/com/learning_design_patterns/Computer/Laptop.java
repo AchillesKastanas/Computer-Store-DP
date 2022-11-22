@@ -13,7 +13,9 @@ public class Laptop extends Computer{
     @Override
     public void doAction() {
         //Action for Desktop: TAKE PIC
-        System.out.println("Picture taken from: " + systemSpecs);
+        System.out.println("[" + System.identityHashCode(this) + " - LAPTOP] Picture Taken");
+
+
     }
 
     @Override

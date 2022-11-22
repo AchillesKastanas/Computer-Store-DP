@@ -1,5 +1,7 @@
 package com.learning_design_patterns;
 
+import java.util.Scanner;
+
 import com.learning_design_patterns.Customer.Customer;
 import com.learning_design_patterns.Store.TopTierComputersStore;
 
@@ -10,26 +12,27 @@ public final class App {
     }
 
     public static void main(String[] args) {
+
         //Create the TopTierComputersStore
         TopTierComputersStore topTierComputersStore = TopTierComputersStore.getInstance();
 
-        //Create a customer
-        synchronized(App.class){
-            Customer mike = new Customer();
-            Customer mina = new Customer();
-    
-            topTierComputersStore.subscribe(mike);
-            topTierComputersStore.subscribe(mina);
+        System.out.println("------------------------------------------------");
+        Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Welcome to Design Patters Part 1.\nPlease enter the [Number of Customers]: ");
+        int customerCount = Integer.parseInt(scanner.nextLine());  // Read user input
+        System.out.println("\nNow please enter the [Number of Computers to be created]: ");
+        int computerCount = Integer.parseInt(scanner.nextLine());  // Read user input
+        scanner.close();
+        System.out.println("\n------------------------------------------------");
+
+        //Create the Customers
+        for(int i = 0; i <customerCount; i++){
+            topTierComputersStore.subscribe( new Customer());
         }
-        
-        synchronized(App.class){
-            topTierComputersStore.orderNewRandomComputerFromRandomFactory();
-            topTierComputersStore.orderNewRandomComputerFromRandomFactory();
-            topTierComputersStore.orderNewRandomComputerFromRandomFactory();
-            topTierComputersStore.orderNewRandomComputerFromRandomFactory();
-            topTierComputersStore.orderNewRandomComputerFromRandomFactory();
+
+        //Create the Computers
+        for(int i = 0; i <computerCount; i++){
             topTierComputersStore.orderNewRandomComputerFromRandomFactory();
         }
-        
     }
 }
