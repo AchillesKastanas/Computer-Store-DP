@@ -55,12 +55,12 @@ public class RandomComputerSpecGenerator {
         //Laptop
         if(type.equals("Laptop")){
             generatedComputer = new Laptop(generatedSpecList);
-            System.out.println("[FACTORY] New Laptop Created with specs: " + generatedSpecList);
+            System.out.println("[FACTORY]\tNew Laptop Created with specs: " + generatedSpecList);
         }
         //DesktopPC
         else{
             generatedComputer = new DesktopPC(generatedSpecList);
-            System.out.println("[FACTORY] New Desktop Created with specs: " + generatedSpecList);
+            System.out.println("[FACTORY]\tNew Desktop Created with specs: " + generatedSpecList);
         }
         
         return generatedComputer;

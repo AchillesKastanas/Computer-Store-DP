@@ -19,7 +19,7 @@ public class Customer implements Icustomer{
         RandomComputerSpecGenerator randomComputerSpecGenerator = new RandomComputerSpecGenerator();
         myComputer = randomComputerSpecGenerator.generateComputerForCustomer();
     
-        System.out.println("[CUSTOMER] Hi, I'm Customer: " + System.identityHashCode(this) +". The computer that i want has: " + myComputer.getPartList()
+        System.out.println("[CUSTOMER]\tHi, I'm Customer: " + System.identityHashCode(this) +". The computer that i want has: " + myComputer.getPartList()
             + " and it is a " + myComputer.getClass().getSimpleName());
     }
     
@@ -31,7 +31,7 @@ public class Customer implements Icustomer{
         //If the new PC matches the specs the pc has && they are both laptops or desktops
         if(newAvailablePc.getPartList().equals(myComputer.getPartList()) && 
             newAvailablePc.getClass().equals(myComputer.getClass())){
-            System.out.println("[CUSTOMER] Hey! I need that: " + System.identityHashCode(newAvailablePc) + " with specs: " + newAvailablePc.getPartList());
+            System.out.println("[CUSTOMER]\tHey! I need that: " + System.identityHashCode(newAvailablePc) + " with specs: " + newAvailablePc.getPartList());
             //Remove from the stores available computers
             topTierComputersStore.removePC(newAvailablePc);
             //Unsubscribe from the store

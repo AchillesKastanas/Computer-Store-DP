@@ -30,7 +30,7 @@ public class TopTierComputersStore {
 
                 if(instance == null){
                     instance = new TopTierComputersStore();
-                    System.out.println("[STORE] Top Tier Store Created");
+                    System.out.println("[STORE]\t\tTop Tier Store Created");
                 }
             }
         }
@@ -39,22 +39,22 @@ public class TopTierComputersStore {
     }
 
     public void subscribe(Customer customer){
-        System.out.println("[STORE] Customer: " + System.identityHashCode(customer) + " subscribed to the waitlist");
+        System.out.println("[STORE]\t\tCustomer: " + System.identityHashCode(customer) + " subscribed to the waitlist");
         subscribedCustomers.add(customer);
     }
 
     public void unsubscribe(Customer customer){
-        System.out.println("[STORE] Customer: " + System.identityHashCode(customer) + " unsubscribed from the waitlist");
+        System.out.println("[STORE]\t\tCustomer: " + System.identityHashCode(customer) + " unsubscribed from the waitlist");
         subscribedCustomers.remove(customer);
     }
 
     private void addPC(Computer computer){
-        System.out.println("[STORE] Computer: " + System.identityHashCode(computer) + " marked as Available");
+        System.out.println("[STORE]\t\tComputer: " + System.identityHashCode(computer) + " marked as Available");
         availableComputers.add(computer);
     }
 
     public void removePC(Computer computer){
-        System.out.println("[STORE] Computer: " + System.identityHashCode(computer) + " marked as Sold");
+        System.out.println("[STORE]\t\tComputer: " + System.identityHashCode(computer) + " marked as Sold");
         availableComputers.remove(computer);
     }
 
@@ -65,7 +65,7 @@ public class TopTierComputersStore {
         //If a user wants this PC, he will remove himself from the ArrayList instantly, making an error
         //Catch the error and print a Delivery Complete message
         catch(Exception e){
-            System.out.println("[STORE] Computer: " + System.identityHashCode(justArrivedComputer) + " has been delivered.");
+            System.out.println("[STORE]\t\tComputer: " + System.identityHashCode(justArrivedComputer) + " has been delivered.");
         }
     }
 
